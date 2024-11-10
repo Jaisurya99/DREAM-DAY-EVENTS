@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floating Box Example</title>
+    <style>
+        /* Basic Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* Makes page taller for scroll effect */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Floating Box Styling */
+        .floating-box {
+            position: fixed;
+            bottom: 20px; /* Position from the bottom of the page */
+            right: 20px;  /* Position from the right of the page */
+            width: 200px;
+            padding: 15px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        /* Button Styling Inside the Floating Box */
+        .floating-box button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #fff;
+            color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .floating-box button:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Box HTML -->
+    <div class="floating-box">
+        <h3>Need Help?</h3>
+        <p>Contact us anytime for assistance.</p>
+        <button onclick="alert('Contact Us Clicked!')">Contact Us</button>
+    </div>
+
+</body>
+</html>

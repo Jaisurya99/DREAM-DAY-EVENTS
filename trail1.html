@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auto Sliding Image Slider</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .slider {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+    .slide img {
+      width: 100%;
+      display: block;
+    }
+    .navigation {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slides">
+    <div class="slide"><img src="image1.jpg" alt="Image 1"></div>
+    <div class="slide"><img src="image2.jpg" alt="Image 2"></div>
+    <div class="slide"><img src="image3.jpg" alt="Image 3"></div>
+    <!-- Add more slides as needed -->
+  </div>
+</div>
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+  const totalSlides = slides.length;
+
+  function showNextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  // Automatically switch slides every 3 seconds
+  setInterval(showNextSlide, 3000);
+</script>
+
+</body>
+</html>

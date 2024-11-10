@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+       
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+
+        
+        .contact-details {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-details p {
+            margin: 10px 0;
+        }
+
+        
+        .social-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        
+        .map {
+            margin-top: 20px;
+        }
+
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            .social-links a {
+                font-size: 20px;
+            }
+        }
+        #a2{
+            color: #0056b3;
+            text-decoration: none;
+            margin-left: 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-box">
+        <a href="booking.html"> BOOK NOW </a>
+    </div>
+<div class="container">
+    
+    <div class="header">
+        <h1>Contact Us</h1>
+        <a id="a2" href="index.html">HOME</a>
+        <p>We're here to help and answer any questions you may have. We look forward to hearing from you!</p>
+    </div>
+
+   
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+                <option value="support">Support</option>
+                <option value="sales">Sales</option>
+                <option value="inquiry">General Inquiry</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+    </form>
+
+    
+    <div class="contact-details">
+        <p><strong>Phone:</strong> <a href="tel:+1234567890">9876543210</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@example.com">dreamdayevents@gmail.com</a></p>
+        <p><strong>Address:</strong>  Event Street ,NEW DELHI ,INDIA</p>
+    </div>
+
+   
+    <div class="social-links">
+        <a href="https:\\www.LinkedIn.com" title="LinkedIn">LinkedIn</a>
+        <a href="https:\\www.Twitter.com" title="Twitter">Twitter</a>
+        <a href="https:\\www.facebook.com" title="Facebook">Facebook</a>
+        <a href="https:\\www.instagram.com" title="Instagram">Instagram</a>
+    </div>
+    
+</div>
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h3>About</h3>
+                <img src="about us.png" height="80px"width="100px">
+                <p>Discover and book the best events happening in your city. From concerts to workshops, we've got you covered.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Browse Events</a></li>
+                    <li><a href="#">Create Event</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li>support@dreamdayevents.com</li>
+                        <li>1-800-EVENTS</li>
+                        <li>123 Event Street</li>
+                        <li>NEW DELHI ,INDIA</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Subscribe to get updates about new events</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button class="btn-primary">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        <div class="social-links">
+            <a href="https:\\www.LinkedIn.com" title="LinkedIn">LinkedIn</a>
+            <a href="https:\\www.Twitter.com" title="Twitter">Twitter</a>
+            <a href="https:\\www.facebook.com" title="Facebook">Facebook</a>
+            <a href="https:\\www.instagram.com" title="Instagram">Instagram</a>
+        </div>
+        <div class="footer-bottom">
+            © 2024 Event Management();</div>. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

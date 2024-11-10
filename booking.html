@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ff3300, #feb47b);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .booking-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .booking-form h2 {
+            margin-top: 0;
+            color: #ff3300;
+        }
+
+        .booking-form label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        .booking-form input, .booking-form select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        .booking-form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .booking-form button:hover {
+            background-color: #218838;
+        }
+        .saved-data {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 20px;
+            padding: 20px;
+            max-width: 400px;
+            color: #333;
+        }
+        a{
+            text-decoration: none;
+            color: #feb47b;
+            margin-left:330px ;
+        }
+    </style>
+</head>
+<body>
+    <div class="booking-form">
+        <h2>Booking Form</h2>
+        <a href="index.html">Home</a>
+        <form id="bookingForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="subject">Type of Event:</label>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Select event type</option>
+                <option value="Sales">Corporate event</option>
+                <option value="General Inquiry">Family event</option>
+                <option value="Support">Tech events</option>
+            </select>
+
+            <label for="contact">Contact Information:</label>
+            <input type="text" id="contact" name="contact" placeholder="Email or phone" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+
+    
+    <div class="saved-data" id="savedData" style="display: none;">
+        <h3>Thank you for your response!</h3>
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Date:</strong> <span id="displayDate"></span></p>
+        <p><strong>Type of Event:</strong> <span id="displaySubject"></span></p>
+        <p><strong>Contact Information:</strong> <span id="displayContact"></span></p>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            
+            const name = document.getElementById('name').value;
+            const date = document.getElementById('date').value;
+            const subject = document.getElementById('subject').value;
+            const contact = document.getElementById('contact').value;
+
+            
+            document.getElementById('displayName').textContent = name;
+            document.getElementById('displayDate').textContent = date;
+            document.getElementById('displaySubject').textContent = subject;
+            document.getElementById('displayContact').textContent = contact;
+
+            
+            document.getElementById('savedData').style.display = 'block';
+
+            
+            document.getElementById('bookingForm').reset();
+        });
+    </script>
+</body>
+</html>
